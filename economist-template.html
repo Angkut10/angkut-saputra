@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nama Anda — Economist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --ink:#1A1A1A;
+    --ink-soft:#5B5B5B;
+    --rule:#E2E2E2;
+    --accent:#2C4A7C;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Source Serif 4', serif;
+    line-height:1.65;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ===== Nav ===== */
+  nav{
+    border-bottom:1px solid var(--rule);
+    padding:18px 0;
+  }
+  nav .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  nav .name{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+  }
+  nav .links{
+    display:flex;
+    gap:22px;
+    font-family:'Inter', sans-serif;
+    font-size:0.88rem;
+  }
+  nav a{
+    color:var(--ink-soft);
+    text-decoration:none;
+  }
+  nav a:hover{color:var(--accent);}
+
+  /* ===== Hero / About ===== */
+  header.hero{
+    padding:56px 0 40px;
+    display:flex;
+    gap:32px;
+    align-items:flex-start;
+    border-bottom:1px solid var(--rule);
+  }
+  .photo{
+    width:130px;
+    height:130px;
+    border-radius:4px;
+    background:#F2F2F2;
+    border:1px solid var(--rule);
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Inter', sans-serif;
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    text-align:center;
+    padding:8px;
+  }
+  h1{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:1.9rem;
+    margin:0 0 4px;
+  }
+  .affil{
+    font-family:'Inter', sans-serif;
+    font-size:0.95rem;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+  .bio{
+    max-width:56ch;
+    font-size:1rem;
+    color:var(--ink-soft);
+  }
+  .links-row{
+    margin-top:14px;
+    font-family:'Inter', sans-serif;
+    font-size:0.88rem;
+  }
+  .links-row a{
+    color:var(--accent);
+    margin-right:16px;
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+  }
+  .links-row a:hover{border-bottom-color:var(--accent);}
+
+  /* ===== Sections ===== */
+  section{
+    padding:44px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  section:last-of-type{border-bottom:none;}
+  h2{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:var(--ink);
+    margin:0 0 22px;
+  }
+
+  .entry{
+    padding:16px 0;
+    border-top:1px solid var(--rule);
+  }
+  .entry:first-child{border-top:none; padding-top:0;}
+  .entry h3{
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    font-size:1.08rem;
+    margin:0 0 4px;
+  }
+  .entry .meta{
+    font-family:'Inter', sans-serif;
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    margin:0 0 8px;
+  }
+  .entry p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:0.96rem;
+  }
+  .entry .entry-links a{
+    font-family:'Inter', sans-serif;
+    font-size:0.82rem;
+    margin-right:14px;
+  }
+
+  .placeholder{
+    color:#B0463A;
+    font-family:'Inter', sans-serif;
+    font-size:0.78rem;
+    font-style:normal;
+  }
+
+  footer{
+    padding:32px 0 48px;
+    font-family:'Inter', sans-serif;
+    font-size:0.8rem;
+    color:var(--ink-soft);
+  }
+
+  @media (max-width: 560px){
+    header.hero{flex-direction:column; align-items:center; text-align:center;}
+    .bio{max-width:100%;}
+    nav .links{gap:14px; font-size:0.82rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="name">Nama Anda</span>
+    <div class="links">
+      <a href="#tentang">Tentang</a>
+      <a href="#riset">Riset</a>
+      <a href="#publikasi">Publikasi</a>
+      <a href="#cv">CV</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero" id="tentang">
+    <div class="photo">[Foto profil]</div>
+    <div>
+      <h1>Nama Anda</h1>
+      <p class="affil">[Afiliasi / status — mis. Kandidat PhD, Universitas ..., atau Independent Researcher]</p>
+      <p class="bio">
+        [Tulis 2–4 kalimat bio singkat di sini: bidang minat, latar belakang akademik,
+        dan apa yang sedang Anda kerjakan saat ini.]
+      </p>
+      <div class="links-row">
+        <a href="mailto:email@contoh.com">Email</a>
+        <a href="#">CV (PDF)</a>
+        <a href="#">Google Scholar</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="riset">
+    <h2>Riset</h2>
+    <div class="entry">
+      <h3>[Judul proyek riset]</h3>
+      <p class="meta">[Status — mis. Working paper, Draf, Kerja bersama dosen pembimbing]</p>
+      <p>[Ringkasan singkat 1–2 kalimat tentang proyek ini.]</p>
+    </div>
+    <div class="entry">
+      <h3>[Judul proyek riset lainnya]</h3>
+      <p class="meta">[Status]</p>
+      <p>[Ringkasan singkat.]</p>
+    </div>
+  </section>
+
+  <section id="publikasi">
+    <h2>Publikasi &amp; Working Papers</h2>
+    <div class="entry">
+      <h3>[Judul paper]</h3>
+      <p class="meta">[Nama penulis], [Tahun] — [Nama jurnal / status submission]</p>
+      <p class="entry-links">
+        <a href="#">PDF</a>
+        <a href="#">Abstrak</a>
+      </p>
+    </div>
+    <div class="entry">
+      <h3>[Judul paper]</h3>
+      <p class="meta">[Nama penulis], [Tahun]</p>
+      <p class="entry-links">
+        <a href="#">PDF</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <div class="entry">
+      <h3>Pendidikan</h3>
+      <p>[Gelar] — [Institusi], [Tahun]</p>
+    </div>
+    <div class="entry">
+      <h3>Pengalaman</h3>
+      <p>[Posisi] — [Institusi/Organisasi], [Tahun–Tahun]</p>
+    </div>
+    <div class="entry">
+      <p class="entry-links"><a href="#">Unduh CV lengkap (PDF)</a></p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p style="color:var(--ink-soft); max-width:50ch;">
+      [Kalimat singkat undangan untuk dihubungi — mis. terbuka untuk diskusi riset atau kolaborasi.]
+    </p>
+    <p class="placeholder">Ganti: email@contoh.com</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Nama Anda
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
